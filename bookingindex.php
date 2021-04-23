@@ -28,7 +28,7 @@
 		<div class="flex-child">
 		    <h3>Book A Parking Slot!</h3> 
 		    <img src="park.jpg" alt="parking" id="parking"><br>
-		    <p>Pre-book a slot for parking of your choice by the number of hours of the time slot of your choice and pay the bill online!</p>
+		    <p>Pre-book a slot for parking of your choice by the number of hours, for the time slot of your choice and pay the bill online!</p>
 		     <br>
 		    <button class="button"> <span>Go to Site</span></button>
 		</div>
