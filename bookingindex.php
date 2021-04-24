@@ -30,7 +30,7 @@
 		    <img src="park.jpg" alt="parking" id="parking"><br>
 		    <p>Pre-book a slot for parking of your choice by the number of hours, for the time slot of your choice and pay the bill online!</p>
 		     <br>
-		    <button class="button"><a href="parking.php" target="_blank" class="site"><span>Go to Site</span></a></button>
+		    <button class="button"><a href="parking.php" class="site"><span>Go to Site</span></a></button>
 		</div>
 	</main>
 
