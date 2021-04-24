@@ -116,7 +116,7 @@ input[type=text]:focus, input[type=password]:focus,  input[type=email]:focus {
 
 
 /* Float cancel and signup buttons and add an equal width */
-.cancelbtn, .signupbtn {
+.btn {
   width: 25%;
 }
 
@@ -179,7 +179,7 @@ hr {
 
 /* Change styles for cancel button and signup button on extra small screens */
 @media screen and (max-width: 300px) {
-  .cancelbtn, .signupbtn {
+  .btn {
      width: 100%;
   }
 }
