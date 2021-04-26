@@ -1,4 +1,5 @@
 <?php
+//create user profile 
 if(isset($_POST["signup_submit"])){
 
 	$servername = "localhost";
@@ -54,7 +55,7 @@ if(isset($_POST["signup_submit"])){
 			if ($conn->query($sql) === TRUE) {
 			//  echo "Table Accounts created successfully";
 			} else {
-			  echo "Error creating table: " . $conn->error;
+			  echo "Error creating accounts table: " . $conn->error;
 			  exit();
 			}
 		}
@@ -72,4 +73,5 @@ if(isset($_POST["signup_submit"])){
 
 	$conn->close();
 }
+
 ?>
