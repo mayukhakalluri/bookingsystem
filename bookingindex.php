@@ -14,7 +14,7 @@
 		    <img src="plane.jpg" alt="plane" id="plane"><br>
 		    <p>Planning to Travel? Go to the site to check the various flight options available for you to travel to different destinations!</p>	
 		    <br>
-		   <button class="button"><a href="" class="site"><span>Go to Site</span></a></button>
+		   <button class="button"><a href="flight.php" class="site"><span>Go to Site</span></a></button>
 		</div>
 
 		<div class="flex-child">
@@ -22,7 +22,7 @@
 		    <img src="car.jpg" alt="car" id="car"> <br>
 		    <p>To book a car to rent for couple or hours, go to the site to check the various options of cars and packages available!</p>
 		     <br>
-		    <button class="button"><a href="" class="site"><span>Go to Site</span></a></button>
+		    <button class="button"><a href="rent.php" class="site"><span>Go to Site</span></a></button>
 		</div>
 
 		<div class="flex-child">

@@ -1,11 +1,11 @@
 <?php
-   include('parking_session.php');
+   include('flight_session.php');
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Welcome to Parking Slot Booking!</title>
+	<title>Welcome to Flight Ticket Booking System!</title>
     <link rel="stylesheet" type="text/css" href="parking_main.css">
 
 </head>
@@ -18,19 +18,17 @@
         </div><br><br>
     </form>
    
-    <h1>Book A Slot!</h1>
+    <h1>Book A Seat!</h1>
     <main>
-        <button class="floor" id="0">Ground Floor</button> &#160;&#160;&#160;&#160; <button id="1" class="floor">First Floor</button>
-        <br><br><br>
-        <button id="2" class="floor">Second Floor</button> &#160;&#160;&#160;&#160; <button id="3" class="floor">Third Floor</button>
+        Filters
     </main><br><br><br><hr>
-    <script src="parking_main.js"></script>
     <div id="display_table"></div>
     
 </body>
 </html>
 
 <?php
+
     if(array_key_exists('logout', $_POST)) {
         logout();
     }
@@ -39,7 +37,7 @@
         session_start();
    
 	   if(session_destroy()) {
-	      header("Location: parking.php");
+	      header("Location: flight.php");
 	   }
     }
 
@@ -50,8 +48,7 @@
     
     function summary() {
         session_start();
-        header("Location: parking_summary.php");
+        header("Location: flight_summary.php");
     }
    
 ?>
-

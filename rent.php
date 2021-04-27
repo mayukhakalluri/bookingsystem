@@ -1,19 +1,19 @@
 <?php
-    
+   
     session_start();
 
     $servername = "localhost";
 	$username = "root";
 	$password = "admin123";
-	
-	$conn = new mysqli($servername, $username, $password);
+
+    $conn = new mysqli($servername, $username, $password);
 	// Check connection
 	if ($conn->connect_error) {
 	  die("Connection failed: " . $conn->connect_error);
 	  exit();
 	}
 	// Create database
-	$sql = "CREATE DATABASE IF NOT EXISTS parking;";
+	$sql = "CREATE DATABASE IF NOT EXISTS rentcar;";
 	if ($conn->query($sql) === TRUE) {
 	 	//echo "Database created successfully";
 	} else {
@@ -22,10 +22,9 @@
 	}
 	
 	$conn->close();
+
+	include("rent_config.php");
    
-
-    include("parking_config.php");
-
     if(isset($_POST["login_submit"])){
    		if($_SERVER["REQUEST_METHOD"] == "POST") {
 	      
@@ -40,7 +39,7 @@
 		    
 	        if($count == 1) {
 		        $_SESSION['login_user'] = $myusername;
-		        header("location: parking_main.php");
+		        header("location: rent_main.php");
 		    }else {
 		    	echo "Invalid Email ID and/or Password. Please try again!";
 		    }
@@ -53,12 +52,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Book A Parking Slot!</title>
-	<link rel="stylesheet" type="text/css" href="parking.css">
+	<title>Book A Car on Rent!</title>
+	<link rel="stylesheet" type="text/css" href="rent.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 <body>
-	<h1>Welcome to GSU Parking Slot Booking System!</h1>
+	<h1>Welcome to GSU Car Booking System!</h1>
 	<main>
 		<button class="button" onclick="document.getElementById('login_form').style.display='block'">Already have an account? &#160; <a class="site"><span>Login</span></a></button> 
 		&#160;&#160;&#160;&#160;&#160;
@@ -79,23 +78,30 @@
 		      <label for="name"><strong>Name</strong></label>
 		      <input type="text" placeholder="Enter Full Name" id="name" name="name" required><br><br>
 
-		      <label for="email"><strong>Email</strong></label>
-		      <input type="email" placeholder="Enter Email" id="email" name="email" required><br><br>
+		      <label for="dl"><strong>License No.</strong></label>
+		      <input type="text" placeholder="Enter DL Number" id="dl" name="dl" maxlength="9" required><br><br>
 
 		      <label for="contact"><strong>Contact No.</strong></label>
 		      <input type="text" placeholder="Enter Phone Number" id="contact" name="contact" maxlength="10" required><br><br>
+
+		      <label for="email"><strong>Email</strong></label>
+		      <input type="email" placeholder="Enter Email" id="email" name="email" required><br><br>
+
+		      <label for="dob"><strong>Date of Birth</strong></label>
+		      <input type="date" placeholder="Enter DOB as MM-DD-YYYY" id="dob" name="dob" required><br><br>
+
+		      <label for="age"><strong>Age</strong></label>
+		      <input type="text" placeholder="Enter Age" name="age" required><br><br>
+		      
+		      <label for="gender"><strong>Gender</strong></label>
+		      <input type="text" placeholder="Enter Gender as M OR F" maxlength="1" name="gender" required><br><br>
 
 		      <label for="psw"><strong>Password</strong></label>
 		      <input type="password" placeholder="Enter Password" id="pass1" name="psw" onkeyup="check();" required><br><br>
 
 		      <label for="psw-repeat"><strong>Confirm Password</strong></label>
-		      <input type="password" placeholder="Repeat Password" id="pass2" name="psw-repeat" onkeyup="check();" required><span id="message"></span><br><br>
-
-		      <label for="carname"><strong>Car Name</strong></label>
-		      <input type="text" placeholder="Enter Car Name. Ex: Mazda 6" name="carname" required><br><br>
-		      
-		      <label for="carno"><strong>Car Registration No.</strong></label>
-		      <input type="text" placeholder="Enter Car Registration Number. Ex: CFQ6708" maxlength="10" name="carno" required><br><br>
+		      <input type="password" placeholder="Repeat Password" id="pass2" name="psw-repeat" onkeyup="check();" required>&#160;&#160;
+		      <span id="message"></span><br><br><br><br>
 
 		      <label><strong><input type="checkbox" checked="checked" name="remember"/ style="height: 20px; width: 20px;"> Remember me</strong></label><br><br><br>
 		      <label id="terms">By creating an account you agree to our <a href="#" style="color: #11557d;">Terms & Privacy</a>.</label>
@@ -123,7 +129,7 @@
 	</script>
 
 	<?php
-		include("parking_database.php");
+		include("rent_database.php");
 	?>
 
 	<div id="login_form" class="modal">
