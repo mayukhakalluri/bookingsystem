@@ -1,0 +1,326 @@
+*{
+	font-family: WorldofWater-Regular;
+	background-image: url('backimg.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+@font-face {
+  font-family: "WorldofWater-Regular";
+  src: url("worldofwater.ttf");
+}
+
+
+h1{
+	font-size: 60px;
+	text-align: center;
+	text-decoration: underline;
+	text-shadow: 1px 2px 4px #eb7500;
+	color: #11557d;
+	font-family: WorldofWater-Regular;
+}
+
+
+h2{
+	font-size: 45px;
+	text-align: center;
+	text-decoration: underline;
+	text-shadow: 1px 2px 4px #eb7500;
+	color: #11557d;
+	font-family: WorldofWater-Regular;
+}
+
+
+button{
+	display: inline-block;
+	margin-right: auto;
+	margin-left: auto;
+	width: 600px;
+	height: 60px;
+	font-size: 30px;
+	border: 5px solid #11557d;
+	transition: all 0.5s;
+    cursor: pointer;
+    color:#e06100;
+}
+
+
+.site{
+	text-decoration: none;
+	color: #11557d;
+}
+
+main
+{
+	width: 85%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5%;
+	background-image: url('blue.jpg');
+	padding: 2%;
+	border: 8px solid #ffb03b;
+	box-shadow: 0px 0px 5px 8px #11557d;
+}
+
+#back
+{
+	height: 3%;
+	width: 3%;
+	float: left;
+
+}
+
+
+#head-btn{
+	display: inline-block;
+	float: right;
+	margin-top: 1%;
+}
+
+.logout_btn{
+  width: 200px;
+  height: 50px;
+  font-size: 25px;
+  margin-right: 5px;
+  display: inline-block;
+  border: 5px solid #11557d;
+  transition: all 0.5s;
+  cursor: pointer;
+  color:#e06100;
+}
+
+.logout_btn:hover{
+	border: 5px solid #16274a;
+	box-shadow: 0px 0px 5px 5px #ffb03b;
+}
+
+.confirm{
+  width: 150px;
+  height: 50px;
+  font-size: 20px;
+  margin-right: 5px;
+  display: inline-block;
+  border: 5px solid #e06100;
+  transition: all 0.5s;
+  cursor: pointer;
+  color: #11557d;
+  background: ivory;
+}
+
+
+.confirm:hover{
+	border: 5px solid ivory;
+	box-shadow: 0px 0px 5px 5px #11557d;
+	background: #11557d;
+	color: #ffb03b;
+}
+
+.checkfilter{
+  width: 99.5%;
+  height: 40px;
+  font-size: 25px;
+  margin-right: 5px;
+  display: inline-block;
+  border: 2.5px solid #e06100;
+  transition: all 0.5s;
+  cursor: pointer;
+  color: #11557d;
+  background: ivory;
+}
+
+.checkfilter span{
+  transition: all 0.5s;
+  cursor: pointer;
+  color: #11557d;
+  background: ivory;
+}
+
+
+.checkfilter:hover{
+	border: 2.5px solid ivory;
+	box-shadow: 0px 0px 5px 5px #11557d;
+	background: #11557d;
+	color: #ffb03b;
+}
+
+.filterable{
+	margin-top:15px;
+	border: 2.5px solid #16274a;
+}
+
+.filterable .panel-heading .pull-right{
+	margin-top:-20px;
+}
+
+.filterable .filters input[disabled]{
+	cursor:auto;
+	box-shadow:none;
+	height:auto;
+	text-align: center;
+}
+
+.filterable .filters input[disabled]::-webkit-input-placeholder{
+	color:#16274a;
+	text-align: center;
+}
+
+.filterable .filters input[disabled]::-moz-placeholder{
+	color:#16274a;
+	text-align: center;
+}
+
+.filterable .filters input[disabled]:-ms-input-placeholder{
+	color:#16274a;
+	text-align: center;
+}
+
+.filters{
+	border: 2.5px solid #16274a;
+}
+
+.container{
+	padding: 5%;
+	border: 2.5px solid #16274a;
+	width: 100%;
+}
+
+td,table{
+	width: 100px;
+	height: 30px;
+	font-size: 20px;
+	text-align: center;
+	border: 2.5px solid #16274a;
+	margin: 5px 25px 5px 15px;
+	background: ivory;
+}
+th{
+	width: 300px;
+	font-size: 20px;
+	border: 2.5px solid #16274a;
+	text-align: center;
+	background: ivory;
+	margin: 5px 25px 5px 15px;
+}
+td, input[type=text]{
+	padding: 10px 10px 10px 15px;
+	color: #16274a;
+	border: 2.5px solid #16274a;
+	width: 150px;
+	font-size: 25px;
+}
+
+.date{
+	color: #16274a;
+	border: 2.5px solid #16274a;
+	width: 70px;
+	font-size: 15px;
+}
+
+input[type=date]{
+	background: ivory;
+}
+
+input[type=button]{
+ 	width: 120px;
+	height: 50px;
+	color: ivory;
+	background: #11557d;
+ }
+
+input[type=button]:hover, input[type=button]:focus {
+	border: 3px solid ivory;
+	box-shadow: 0px 0px 2px 3px #16274a;
+}
+
+input[type=button]:disabled{
+	border: 5px solid #16274a;
+	background: ivory;
+	color: #11557d;
+	cursor: not-allowed;
+	background: lightgray;
+}
+
+#count{
+	font-size: 20px;
+	color: #16274a;
+	border: 2.5px solid #16274a;
+	margin: 15px 15px 15px 15px;
+	padding: 5px;
+	padding-left: 10px;
+	width: 97%;
+	background: ivory;
+}
+
+.panel{
+	border: 2.5px solid #16274a;
+	margin: 10px;
+	width: 100%;
+}
+
+.table{
+	width: 97%;
+}
+
+#rowcount{
+	background: ivory;
+}
+
+.scrollit {
+    overflow:scroll;
+    height: 385px;
+    overflow-x: hidden;
+}
+
+.scrollit::-webkit-scrollbar {
+  display: none;
+}
+
+.slot_display{
+	padding: 15% 2% 2% 2%;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+	font-size: 20px;
+	border: 5px dashed #11557d;
+	border-radius: 55%;
+}
+
+#slots{
+	padding:10px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.slot_select{
+  width: 90px;
+  height: 50px;
+  font-size: 20px;
+  margin-right: 5px;
+  display: inline-block;
+  border: 5px solid #e06100;
+  transition: all 0.5s;
+  cursor: pointer;
+  color: ivory;
+  background: #11557d;
+}
+
+.slot_select:hover, .slot_select:focus{
+	border: 5px solid #16274a;
+	box-shadow: 0px 0px 5px 5px #ffb03b;
+	background: ivory;
+	color: #11557d;
+}
+
+.slot_select:disabled{
+	border: 5px solid #16274a;
+	background: ivory;
+	color: #11557d;
+	cursor: not-allowed;
+	background: lightgray;
+}
+
+tbody{
+	width: 80%;
+	padding: 10px;
+}

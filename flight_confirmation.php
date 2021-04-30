@@ -1,11 +1,11 @@
 <?php
-   include('parking_session.php');
+   include('flight_session.php');
 ?>
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Confirmation Page</title>
-	<link rel="stylesheet" type="text/css" href="parking_summary.css">
+	<link rel="stylesheet" type="text/css" href="flight_summary.css">
 </head>
 <body>
 	 <form method="POST">
@@ -16,7 +16,7 @@
     </form>
     <h1>Confirmation</h1>
     <main id="confirmation">
-    	<h2>Parking Slot Booked Successfully! <br><br> Please verify your email for confirmation.</h2>
+    	<h2>Flight Ticket Booked Successfully! <br><br> Please verify your email for confirmation.</h2>
     </main>
 
 </body>
@@ -32,7 +32,7 @@
         session_start();
    
 	   if(session_destroy()) {
-	      header("Location: parking.php");
+	      header("Location: flight.php");
 	   }
     }
 
@@ -42,7 +42,7 @@
     }
     
     function back() {
-        header("Location: parking_summary.php");
+        header("Location: flight_summary.php");
     }
 
 ?>
