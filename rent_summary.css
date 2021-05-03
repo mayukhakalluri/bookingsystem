@@ -1,0 +1,222 @@
+*{
+	font-family: WorldofWater-Regular;
+	background-image: url('backimg.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+@font-face {
+  font-family: "WorldofWater-Regular";
+  src: url("worldofwater.ttf");
+}
+
+h1{
+	font-size: 60px;
+	text-align: center;
+	text-decoration: underline;
+	text-shadow: 1px 2px 4px #eb7500;
+	color: #11557d;
+}
+
+h2{
+	font-size: 45px;
+	text-align: center;
+	text-decoration: underline;
+	text-shadow: 1px 2px 4px #eb7500;
+	color: #11557d;
+}
+
+button{
+	display: inline-block;
+	margin-right: auto;
+	margin-left: auto;
+	width: 600px;
+	height: 60px;
+	font-size: 30px;
+	border: 5px solid #11557d;
+	transition: all 0.5s;
+    cursor: pointer;
+    color:#e06100;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+  color: #16274a;
+}
+
+.button:hover span {
+  padding-right: 25px;
+  color: #16274a;
+}
+
+.button:hover{
+	border: 5px solid #16274a;
+	box-shadow: 0px 0px 5px 10px #ffb03b;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+  color: #16274a;
+}
+
+.site{
+	text-decoration: none;
+	color: #11557d;
+}
+
+#confirmation{
+	width: 55%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5%;
+	background: none;
+	padding: 2.5%;
+	border: 8px solid #ffb03b;
+	box-shadow: 0px 0px 5px 8px #11557d;
+}
+
+main
+{
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5%;
+	background-image: url('blue.jpg');
+	padding: 2.5%;
+	border: 8px solid #ffb03b;
+	box-shadow: 0px 0px 5px 8px #11557d;
+}
+
+
+
+
+.logout_btn{
+  width: 200px;
+  height: 50px;
+  font-size: 25px;
+  margin-right: 5px;
+  display: inline-block;
+  border: 5px solid #11557d;
+  transition: all 0.5s;
+  cursor: pointer;
+  color:#e06100;
+}
+
+.logout_btn:hover{
+	border: 5px solid #16274a;
+	box-shadow: 0px 0px 5px 10px #ffb03b;
+}
+
+#head-btn{
+	display: inline-block;
+	float: right;
+}
+
+.summary{
+	display: block;
+	background: #11557d;
+	padding: 5%;
+}
+
+.details{
+	background: none;
+	width: 80%;
+	font-size: 35px;
+	color: ivory;
+}
+
+.details span{
+	color: #ffb03b;
+	background: none;
+}
+
+#note{
+	font-family: verdana;
+	font-size: 20px;
+	color: ivory;
+	background: none;
+	width: 80%;
+}
+
+.container {
+  border: 3px solid #11557d;
+  border-radius: 3px;
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+  padding: 0 16px;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 10px 2px 2px 2px;
+  font-size: 30px;
+}
+
+.btn {
+  background: #11557d;
+  color: ivory;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+  border: 2px solid ivory;
+}
+
+.btn:hover {
+  background: ivory;
+  border: 3px solid #11557d;
+  color: #11557d;
+}
+
+input[type=text], input[type=password] {
+  width: 60%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 3px solid #11557d;
+  border-radius: 3px;
+  background: lightgray;
+  color: #11557d;
+  font-size: 18px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+  font-size: 20px;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+
+h3{
+	font-size: 25px;
+}
+
+form{
+	padding: 2%;
+	color: #11557d;
+}

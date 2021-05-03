@@ -25,11 +25,11 @@ $(document).ready(function() {
 });
 
 
-var $flight_no;
-var $source_city;
-var $dest_city;
-var $time;
-var $date;
+var flight_no;
+var source_city;
+var dest_city;
+var time;
+var date;
 
 function book_seat(id){
     var myTab = document.getElementById('flight_list');
@@ -38,14 +38,14 @@ function book_seat(id){
         if(myTab.rows[i].id == id){
             var objCells = myTab.rows.item(i).cells;
 
-            $flight_no = objCells.item(0).innerHTML;
-            $source_city = objCells.item(1).innerHTML;
-            $dest_city = objCells.item(2).innerHTML;
-            $time = objCells.item(3).innerHTML;
-            $date = document.getElementById(`date${$flight_no}`).value;
+            flight_no = objCells.item(0).innerHTML;
+            source_city = objCells.item(1).innerHTML;
+            dest_city = objCells.item(2).innerHTML;
+            time = objCells.item(3).innerHTML;
+            date = document.getElementById(`date${flight_no}`).value;
 
             displayData += `<div class="slot_display">`;
-            displayData += `<h2>Flight No. ${$flight_no}</h2><br>`;
+            displayData += `<h2>Flight No. ${flight_no}</h2><br>`;
             displayData += `<table id="slots">`;
             for (var i = 0; i < 3; i++){
                 displayData += `<tr>`;
@@ -108,18 +108,18 @@ function confirm_seat(seat_no)
         $seat_no = document.activeElement.id;
     }
 
-    document.getElementById(`${seat_no}`).disabled = true;  
+    document.getElementById(`${seat_no}`).disabled = true;
 }
 
 function confirm_booking(){ 
     var ask = window.confirm("Are you sure you want to book this seat?");
     if (ask) {
-        createCookie("flight_no", `${$flight_no}`, "1");
-        createCookie("source_city", `${$source_city}`, "1");
-        createCookie("dest_city", `${$dest_city}`, "1");
-        createCookie("time", `${$time}`, "1");
-        createCookie("seat_no", `${$seat_no}`, "1");
-        createCookie("date", `${$date}`, "1");
+        createCookie("flight_no", `${flight_no}`, "1");
+        createCookie("source_city", `${source_city}`, "1");
+        createCookie("dest_city", `${dest_city}`, "1");
+        createCookie("time", `${time}`, "1");
+        createCookie("seat_no", $seat_no, "1");
+        createCookie("date", `${date}`, "1");
 
         window.location.href = "flight_summary.php";
     }

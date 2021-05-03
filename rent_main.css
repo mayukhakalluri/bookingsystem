@@ -1,0 +1,169 @@
+*{
+	font-family: WorldofWater-Regular;
+	background-image: url('backimg.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+@font-face {
+  font-family: "WorldofWater-Regular";
+  src: url("worldofwater.ttf");
+}
+
+h1{
+	font-size: 60px;
+	text-align: center;
+	text-decoration: underline;
+	text-shadow: 1px 2px 4px #eb7500;
+	color: #11557d;
+}
+
+.button{
+	display: inline-block;
+	margin-right: auto;
+	margin-left: auto;
+	width: 800px;
+	height: 50px;
+	font-size: 30px;
+	border: 5px solid #11557d;
+	transition: all 0.5s;
+    cursor: pointer;
+    color:#e06100;
+    background: ivory;
+}
+
+.button:hover{
+	border: 5px solid ivory;
+	box-shadow: 0px 0px 5px 5px #ffb03b;
+	color: #ffb03b;
+	background: #11557d;
+}
+
+main
+{
+	width: 45%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5%;
+	background-image: url('blue.jpg');
+	padding: 2%;
+	border: 8px solid #ffb03b;
+	box-shadow: 0px 0px 5px 8px #11557d;
+	color: #11557d;
+}
+
+#back
+{
+	height: 3%;
+	width: 3%;
+	float: left;
+
+}
+
+#footer
+{
+	width: 400px;
+	display: block;
+}
+
+#head-btn{
+	display: inline-block;
+	float: right;
+	margin-top: 1%;
+}
+
+.logout_btn{
+  width: 200px;
+  height: 50px;
+  font-size: 25px;
+  margin-right: 5px;
+  display: inline-block;
+  border: 5px solid #11557d;
+  transition: all 0.5s;
+  cursor: pointer;
+  color:#e06100;
+}
+
+.logout_btn:hover{
+	border: 5px solid #16274a;
+	box-shadow: 0px 0px 5px 5px #ffb03b;
+}
+
+
+.confirm{
+  width: 150px;
+  height: 50px;
+  font-size: 20px;
+  margin-right: 5px;
+  display: inline-block;
+  border: 5px solid #e06100;
+  transition: all 0.5s;
+  cursor: pointer;
+  color: #11557d;
+  background: ivory;
+}
+
+
+.confirm:hover{
+	border: 5px solid ivory;
+	box-shadow: 0px 0px 5px 5px #11557d;
+	background: #11557d;
+	color: #ffb03b;
+}
+
+
+form{
+	padding: 20px;
+	color: #11557d;
+}
+
+fieldset strong,
+ul strong,
+fieldset label.left,
+fieldset .column {
+  float: left;
+  width: 8em;
+  font-size: 25px;
+  padding-top: 5px;
+  color:  #11557d;
+}
+
+.slot_display{
+	margin-left: auto;
+	margin-right: auto;
+	width: 45%;
+	background-image: url('blue.jpg');
+	border: 8px solid #ffb03b;
+	box-shadow: 0px 0px 5px 8px #11557d;
+	margin-top: 1%;
+	margin-bottom: 5%;
+	padding: 2.5%;
+	color: #11557d;
+}
+
+#next strong,
+ul strong,
+fieldset label.left,
+fieldset .column {
+  float: left;
+  width: 15em;
+  font-size: 25px;
+  padding-top: 5px;
+  color: #11557d;
+  background: ivory;
+}
+
+#msg{
+	font-size: 15px;
+}
+
+input[type=text], input[type=date], select{
+	font-size: 25px;
+	border: 2px solid  #11557d;
+	background: ivory;
+	color:  #11557d;
+}
+
+#details, #slot_frame{
+	background: ivory;
+}

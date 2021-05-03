@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<title>Booking System</title>
 	<link rel="stylesheet" type="text/css" href="bookingindex.css">
+	<meta charset="utf-8">
 </head>
 
 <body>
@@ -36,3 +37,7 @@
 
 </body>
 </html>
+
+
+
+
