@@ -109,6 +109,10 @@
 	$servername = "localhost";
 	$username = "root";
 	$password = "admin123";
+
+	$name = $_SESSION['login_user'];
+	$slot = $_COOKIE["focused_element"];
+	$hours = $_COOKIE["selected"];
 	
 	$conn = new mysqli($servername, $username, $password);
 	// Check connection
@@ -128,11 +132,7 @@
 	 	$exists = mysqli_query($conn, "select 1 from bookedslots");
 
 		if($exists !== FALSE)
-		{
-			$name = $_SESSION['login_user'];
-			$slot = $_COOKIE["focused_element"];
-			$hours = $_COOKIE["selected"];
-			
+		{			
 		   //echo("This table exists");
 		   $conn = new mysqli($servername, $username, $password, $dbname);
 		   $sql = "INSERT INTO bookedslots (name, slot, hours)
@@ -155,6 +155,15 @@
 
 			if ($conn->query($sql) === TRUE) {
 			//  echo "Table Accounts created successfully";
+			   $conn = new mysqli($servername, $username, $password, $dbname);
+			   $sql = "INSERT INTO bookedslots (name, slot, hours)
+				VALUES ( '".$name."' , '".$slot."', '".$hours."')";
+
+				if ($conn->query($sql) === TRUE) {
+				  //echo "Record Saved Successfully";
+				} else {
+				  echo "Error: " . $sql . "<br>" . $conn->error;
+				}
 			} else {
 			  echo "Error creating bookedslots table: " . $conn->error;
 			  exit();
@@ -251,7 +260,7 @@ Booking Service Team';
 			} else {
 			  echo "Error: " . $sql . "<br>" . $conn->error;
 			}
-		}else{
+		} else {
 		    $sql = "CREATE TABLE payment (
 			name VARCHAR(30) NOT NULL,
 			cardname VARCHAR(30) NOT NULL,
@@ -264,6 +273,14 @@ Booking Service Team';
 
 			if ($conn->query($sql) === TRUE) {
 			//  echo "Table Accounts created successfully";
+				$conn = new mysqli($servername, $username, $password, $dbname);
+				$sql = "INSERT INTO payment (name, cardname, cardnumber, expmonth, expyear)
+				VALUES ( '".$name."' , '".$cardname."', '".$cardnumber."', '".$expmonth."', '".$expyear."')";
+
+				if ($conn->query($sql) === TRUE) {
+				} else {
+				  echo "Error: " . $sql . "<br>" . $conn->error;
+				}
 			} else {
 			  echo "Error creating payment table: " . $conn->error;
 			  exit();
@@ -275,6 +292,7 @@ Booking Service Team';
 	  	exit();
 	}
 	$conn->close();
+	
 	$cardname = '';
 	$cardnumber = '';
 	$expmonth = '';
